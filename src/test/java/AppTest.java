@@ -8,25 +8,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AppTest extends FluentTest {
   public WebDriver webDriver = new HtmlUnitDriver();
-//
-//   @Override
-//   public WebDriver getDefaultDriver() {
-//     return webDriver;
-//   }
-//
-//   @ClassRule
-//   public static ServerRule server = new ServerRule();
-//
-//   @Test
-//   public void rootTest() {
-//     goTo("http://localhost:4567/");
-//     assertThat(pageSource()).contains("Coin combinations");
-//   }
-//   @Test
-//   public void changeResult() {
-//     goTo("http://localhost:4567/");
-//     fill("#input").with("55");
-//     submit(".btn");
-//     assertThat(pageSource()).contains("Coin combinations");
-  // }
+
+  @Override
+  public WebDriver getDefaultDriver() {
+    return webDriver;
+  }
+
+  @ClassRule
+  public static ServerRule server = new ServerRule();
+
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Check your allergy score.");
+  }
+  @Test
+  public void changeResult() {
+    goTo("http://localhost:4567/");
+    click(".checkbox");
+    submit(".btn");
+    assertThat(pageSource()).contains("It is very sad but your allergy score is:");
+  }
 }

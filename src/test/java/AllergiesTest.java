@@ -70,4 +70,14 @@ public class AllergiesTest {
     Integer expected = 128;
     assertEquals(expected, testAllergies.allergiesScore(testAllergyArray));
   }
+  @Test
+  public void checka_AllergiesScorer_129(){
+    Allergies testAllergies = new Allergies();
+    ArrayList<String> testAllergyArray = new ArrayList();
+    testAllergyArray.add("cats");
+    testAllergyArray.add("eggs");
+    Integer expected = 129;
+    assertEquals(expected, testAllergies.allergiesScore(testAllergyArray));
+  }
+
 }

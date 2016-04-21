@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Set;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
@@ -18,12 +20,13 @@ public class App {
     get("/results", (request, response) -> {
         HashMap model = new HashMap();
         model.put("template", "templates/results.vtl" );
-
-        // Integer number = Integer.parseInt(request.queryParams("input"));
-        // CoinCombo myCombo = new CoinCombo();
-        // HashMap<String, Integer> coins = myCombo.comboOfCoins(number);
-        // String outputString = String.format("Ypur change is - %d quaters and %d dimes and %d nickes with %d pennies", coins.get("quarters"), coins.get("dimes"), coins.get("nikels"), coins.get("pennies"));
-        // model.put("results", outputString);
+        Allergies allergyList = new Allergies();
+        ArrayList<String> resultArray = new ArrayList<String>();
+        Set<String> resultSet = request.queryParams();
+        for ( String str : resultSet ) {
+          resultArray.add(str);
+        }
+        model.put("results", allergyList.allergiesScore(resultArray));
         return new ModelAndView(model, "templates/layout.vtl");
       }, new VelocityTemplateEngine());
 
