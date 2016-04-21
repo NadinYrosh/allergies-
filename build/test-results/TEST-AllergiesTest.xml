@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AllergiesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-04-21T18:06:43" hostname="epicodus-79.local" time="0.001">
+<testsuite name="AllergiesTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-04-21T20:40:33" hostname="epicodus-79.local" time="0.001">
   <properties/>
-  <testcase name="checka_AllergiesScorer_" classname="AllergiesTest" time="0.001"/>
+  <testcase name="checka_AllergiesScorer_16" classname="AllergiesTest" time="0.0"/>
+  <testcase name="checka_AllergiesScorer_32" classname="AllergiesTest" time="0.0"/>
+  <testcase name="checka_AllergiesScorer_64" classname="AllergiesTest" time="0.0"/>
+  <testcase name="checka_AllergiesScorer_128" classname="AllergiesTest" time="0.0"/>
+  <testcase name="checka_AllergiesScorer_1" classname="AllergiesTest" time="0.0"/>
+  <testcase name="checka_AllergiesScorer_2" classname="AllergiesTest" time="0.0"/>
+  <testcase name="checka_AllergiesScorer_4" classname="AllergiesTest" time="0.0"/>
+  <testcase name="checka_AllergiesScorer_8" classname="AllergiesTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
